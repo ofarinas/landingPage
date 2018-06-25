@@ -179,6 +179,11 @@ body {
 
 .chat {
   position: absolute;
+  float: left;
+  width: 1000px;
+  overflow-y: auto;
+  height: 100px;
+  z-index: 1000;
 }
 
 }
