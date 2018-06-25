@@ -41,18 +41,22 @@
 
     </div>
     <div class="row justify-content-md-center">
-      <div class="col-md-8 input-chat">
+      <div class="col-md-8 input-chat" id="chat-div">
         <div *ngIf="messageList.length>0" class="chat">
-          <div *ngFor="let message of messageList">
+          <div *ngFor="let message of messageList ; let i = index">
             <div class="alert alert-primary" role="alert">
-              {{message}}
+
+              {{messageList[messageList.length-(i+1)]}}
             </div>
             <div class="alert alert-secondary" role="alert">
               alles gut ;)
             </div>
           </div>
         </div>
-
+      </div>
+    </div>
+    <div class="row justify-content-md-center">
+      <div class="col-md-8">
         <form>
           <div class="form-group input-chat">
             <input type="text" class="form-control" [(ngModel)]="inputText" (keydown)="onKeydown($event)"
