@@ -176,13 +176,11 @@ body {
 
 .input-chat {
   position: relative;
+  max-height: 350px;
+  overflow: auto !important;
 
 .chat {
   position: absolute;
 }
 
-}
-.ScrollStyle {
-  max-height: 350px;
-  overflow: auto !important;
 }
