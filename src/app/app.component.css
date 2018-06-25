@@ -179,11 +179,10 @@ body {
 
 .chat {
   position: absolute;
-
 }
 
 }
 .ScrollStyle {
   max-height: 350px;
-  overflow: auto;
+  overflow: auto !important;
 }
