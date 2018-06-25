@@ -29,44 +29,38 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-1">
-          <img src="../assets/baseline-view_headline-24px.svg" width="43px" alt="" id="menu-toggle">
+          <img src="assets/baseline-view_headline-24px.svg" width="43px" alt="" id="menu-toggle">
         </div>
-        <div class="col-11">
-
+        <div *ngIf="messageList.length>0" class="col-11">
+          <div *ngFor="let message of messageList">
+            <div class="alert alert-primary" role="alert">
+              {{message}}
+            </div>
+            <div class="alert alert-secondary" role="alert">
+              alles gut ;)
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="row justify-content-md-center">
-        <img class="img-fluid" src="../assets/logo.jpg" height="auto">
+        <img class="img-fluid" src="assets/logo.jpg" height="auto">
       </div>
       <div class="row container-fluid justify-content-md-center">
-        <h4>Finding the solution with us</h4>
+        <h4>Let´s talk</h4>
       </div>
 
     </div>
     <div class="row justify-content-md-center">
       <div class="col-md-5">
-        <div class="panel panel-primary">
-          <div class="panel-heading" id="accordion">
-            <button type="button" class="btn btn-primary" data-toggle="collapse" data-parent="#accordion"
-                    href="#collapseOne">let´s talk</button>
-            <div class="btn-group pull-right">
-
-            </div>
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" [(ngModel)]="inputText" (keydown)="onKeydown($event)"
+                   id="formGroupExampleInput"
+                   name="formGroupExampleInput"
+                   placeholder="Make a question :)">
           </div>
-          <div class="panel-collapse collapse" id="collapseOne">
-             <div class="panel-footer">
-              <div class="input-group">
-                <input id="btn-input" type="text" class="form-control input-sm"
-                       placeholder="Type your message here..."/>
-                <span class="input-group-btn">
-                            <button class="btn btn-warning btn-sm" id="btn-chat">
-                                Send</button>
-                        </span>
-              </div>
-            </div>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>

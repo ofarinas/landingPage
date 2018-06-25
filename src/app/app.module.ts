@@ -4,6 +4,7 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {MatSidenavModule, MatToolbarModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -11,7 +12,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AppComponent
   ],
   imports: [
-    BrowserModule, MatToolbarModule, MatSidenavModule, BrowserAnimationsModule
+    BrowserModule, MatToolbarModule, MatSidenavModule, BrowserAnimationsModule, FormsModule
 
   ],
   providers: [],

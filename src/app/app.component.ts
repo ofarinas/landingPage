@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  showFiller = false;
+  public showFiller = false;
+  public inputText: string;
+  public messageList: string[] = [];
+
+  onKeydown(event) {
+    if (event.key === "Enter") {
+      this.messageList.push(this.inputText);
+      this.inputText = '';
+      console.log(event);
+    }
+  }
 }
