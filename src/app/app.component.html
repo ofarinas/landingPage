@@ -33,7 +33,9 @@
         </div>
       </div>
       <div class="row justify-content-md-center">
+       <div class="justify-content-md-center">
         <img class="img-fluid" src="assets/logo.jpg" height="auto">
+       </div>
       </div>
       <div class="row justify-content-md-center">
         <div class="col">
@@ -41,21 +43,21 @@
         </div>
       </div>
       <div class="row justify-content-md-center">
-        <div class="col-sm-8 input-chat" id="chat-div">
+        <div class="col-ms-12 col-sm-12 input-chat" id="chat-div">
           <div *ngIf="messageList.length>0" class="chat">
             <div *ngFor="let message of messageList ; let i = index">
               <div class="alert alert-primary" role="alert">
                 {{messageList[messageList.length-(i+1)]}}
               </div>
               <div class="alert alert-secondary" role="alert">
-                alles gut ;)
+               Wir sind der Hammer
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="row justify-content-md-center">
-        <div class="col-sm-8">
+        <div class="col-sm-12 col-md-8">
           <form>
             <div class="form-group input-chat">
               <input type="text" class="form-control" [(ngModel)]="inputText" (keydown)="onKeydown($event)"
