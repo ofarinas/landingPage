@@ -1,6 +1,14 @@
 .img-standard-width{
-  height: 400px;
 }
 .img-width{
-  height: 380px;
+}
+
+.active-transition{
+  -webkit-transition: width 8ms linear 1s;
+  /*Firefox*/
+  -moz-transition: width 8ms linear 1s;
+  /*Opera*/
+  -o-transition: width 8ms linear 1s;
+  /*Standard*/
+  transition: width 8ms linear 1s;
 }
