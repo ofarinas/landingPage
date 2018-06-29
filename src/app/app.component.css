@@ -173,14 +173,3 @@ body {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
   background-color: #555;
 }
-
-.input-chat {
-  position: relative;
-  max-height: 350px;
-  overflow: auto !important;
-
-.chat {
-  position: absolute;
-}
-
-}

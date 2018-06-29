@@ -1,5 +1,4 @@
 <div id="wrapper">
-
   <!-- Sidebar -->
   <div id="sidebar-wrapper">
     <ul class="sidebar-nav">
@@ -12,7 +11,7 @@
         <a href="#">Dashboard</a>
       </li>
       <li>
-        <a href="#">Services</a>
+        <a id="service" routerLink="/service">Services</a>
       </li>
       <li>
         <a href="#">About</a>
@@ -32,41 +31,7 @@
           <img src="assets/baseline-view_headline-24px.svg" width="43px" alt="" id="menu-toggle">
         </div>
       </div>
-      <div class="row justify-content-md-center">
-       <div class="justify-content-md-center">
-        <img class="img-fluid" src="assets/logo.jpg" height="auto">
-       </div>
-      </div>
-      <div class="row justify-content-md-center">
-        <div class="col">
-          <h4 style="text-align: center">Let´s talk</h4>
-        </div>
-      </div>
-      <div class="row justify-content-md-center">
-        <div class="col-ms-12 col-sm-12 input-chat" id="chat-div">
-          <div *ngIf="messageList.length>0" class="chat">
-            <div *ngFor="let message of messageList ; let i = index">
-              <div class="alert alert-primary" role="alert">
-                {{messageList[messageList.length-(i+1)]}}
-              </div>
-              <div class="alert alert-secondary" role="alert">
-               Wir sind der Hammer
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-md-center">
-        <div class="col-sm-12 col-md-8">
-          <form>
-            <div class="form-group input-chat">
-              <input type="text" class="form-control" [(ngModel)]="inputText" (keydown)="onKeydown($event)"
-                     id="formGroupExampleInput"
-                     name="formGroupExampleInput"
-                     placeholder="Make a question :)">
-            </div>
-          </form>
-        </div>
-      </div>
+      <router-outlet></router-outlet>
     </div>
-
+  </div>
+</div>
