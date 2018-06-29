@@ -11,6 +11,7 @@ import {ServiceComponent} from "./component/service/service.component";
 
 const appRoutes: Routes = [
   {path: 'service', component: ServiceComponent},
+  {path: 'index', component: LandingComponent},
   {path: '**', component: LandingComponent}
 
 ];
