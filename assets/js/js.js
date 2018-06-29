@@ -10,3 +10,8 @@ $("#service").click(function (e) {
   e.preventDefault();
   $("#wrapper").toggleClass("toggled");
 });
+$("#index").click(function (e) {
+  console.log('hallo');
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+});
