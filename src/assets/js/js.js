@@ -15,3 +15,8 @@ $("#index").click(function (e) {
   e.preventDefault();
   $("#wrapper").toggleClass("toggled");
 });
+$("#contact").click(function (e) {
+  console.log('hallo');
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+});
