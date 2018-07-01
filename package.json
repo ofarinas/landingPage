@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "rm -fr dist/ && ng build --prod --base-href =landingPage && ngh --dir dist/landingPage"
+    "deploy": "rm -fr dist/ && ng build --prod --base-href =landingPage && ngh --dir dist/landingPage",
+    "postinstall": "ng build --aot -prd"
   },
   "private": true,
   "dependencies": {
